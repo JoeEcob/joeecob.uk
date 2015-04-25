@@ -117,13 +117,12 @@
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
     ga('create', 'UA-51191945-1', 'auto');
     ga('send', 'pageview');
-  </script>
-  <script>
-  $(document).ready(function () {
-    $('li.has-child').click(function() {
-        $(this).toggleClass('open').find('ul').toggle();
+
+    $(document).ready(function () {
+      $('li.has-child').click(function() {
+          $(this).toggleClass('open').find('ul').toggle();
+      });
     });
-  });
   </script>
 
 </body>
