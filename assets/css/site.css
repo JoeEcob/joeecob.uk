@@ -158,7 +158,8 @@ body {
   line-height: 1.6;
   font-weight: 400;
   font-family: "robotolight", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222;
+  background-color: #222;
+  color: #ddd;
   margin-bottom: 2%; }
 
 
@@ -207,7 +208,7 @@ input[type="button"] {
   display: inline-block;
   height: 38px;
   padding: 0 30px;
-  color: #555;
+  color: #ccc;
   text-align: center;
   font-size: 11px;
   font-weight: 600;
@@ -231,7 +232,7 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-  color: #333;
+  color: #999;
   border-color: #888;
   outline: 0; }
 .button.button-primary,
@@ -467,7 +468,7 @@ li.has-child {
 
 li.has-child:after {
   content: "\25BC";
-  color: #999;
+  color: #555;
   font-size: 1rem;
 }
 
@@ -494,7 +495,7 @@ ul li ul {
   }
 
   ul li.has-child ul {
-    background-color: #eee;
-    margin-left: 50%;
+    background-color: #555;
+    margin-left: 0;
   }
 }
