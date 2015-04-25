@@ -1,3 +1,3 @@
-# joeecob.co.uk
+# joeecob.uk
 
-Official repository for [joeecob.co.uk](http://joeecob.co.uk)
+Official repository for [joeecob.uk](http://joeecob.uk)
