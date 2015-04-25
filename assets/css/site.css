@@ -493,13 +493,8 @@ ul li ul {
     list-style-type: none;
   }
 
-  li.has-child:after {
-    content: none;
-  }
-
   ul li.has-child ul {
-    display: block !important;
-    background-color: #ddd;
+    background-color: #eee;
     margin-left: 50%;
   }
 }
