@@ -333,7 +333,7 @@ ul ul,
 ul ol,
 ol ol,
 ol ul {
-  margin: 1.5rem 0 1.5rem 3rem;
+  margin: 1.5rem 0 1.5rem;
   font-size: 90%; }
 li {
   margin-bottom: 1rem; }
@@ -462,6 +462,18 @@ h1.leading {
   text-align: center;
 }
 
+ul {
+  text-align: center;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+ul li.has-child ul {
+  background-color: #555;
+}
+
 li.has-child {
   cursor: pointer;
 }
@@ -482,20 +494,4 @@ ul li ul {
 
 .footer > div:last-child {
   text-align: right;
-}
-
-/* Larger than phablet (also point when grid becomes active) */
-@media (max-width: 550px) {
-  ul {
-    text-align: center !important;
-  }
-
-  ul li {
-    list-style-type: none;
-  }
-
-  ul li.has-child ul {
-    background-color: #555;
-    margin-left: 0;
-  }
 }
