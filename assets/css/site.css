@@ -482,6 +482,10 @@ section.body div.current-stack-more-info {
   background-color: #666;
 }
 
+.lighter {
+  color: #aaa;
+}
+
 section.body div p {
   padding: 1rem;
 }
