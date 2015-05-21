@@ -4,7 +4,7 @@
 
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <title>Joe Ecob - Full Stack Developer - Macclesfield</title>
+  <title>Joe Ecob - Developer - Macclesfield</title>
   <meta charset="utf-8">
   <meta name="author" content="Joe Ecob">
   <meta name="description" content="Full Stack Developer based in Macclesfield.">
@@ -28,65 +28,23 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
-    <div class="row header">
+    <header class="row">
       <div class="u-full-width">
         <h1 class="leading">Joe Ecob</h1>
       </div>
-    </div>
+    </header>
 
-    <div class="row body">
-      <div class="one-third column">&nbsp;</div>
-      <ul class="one-third column">
-        <li>
-          I'm a developer
-        </li>
-        <li class="has-child">
-          I do frontend
-          <ul>
-            <li>Html</li>
-            <li>Css</li>
-            <li>Javascript</li>
-            <li>jQuery</li>
-            <li>SCSS</li>
-          </ul>
-        </li>
-        <li class="has-child">
-          I do backend
-          <ul>
-            <li>PHP</li>
-            <li>Perl</li>
-            <li>C#</li>
-            <li>SQL</li>
-          </ul>
-        </li>
-        <li class="has-child">
-          I've managed servers
-          <ul>
-            <li>Linux</li>
-            <li>Windows</li>
-          </ul>
-        </li>
-        <li class="has-child">
-          I've implemented frameworks
-          <ul>
-            <li>Joomla</li>
-            <li>Magento</li>
-            <li>Wordpress</li>
-          </ul>
-        </li>
-        <li class="has-child">
-          I've worked places
-          <ul>
-            <li>Visav</li>
-            <li>Spareroom</li>
-          </ul>
-        </li>
-      </ul>
-      <div class="one-third column">&nbsp;</div>
-    </div>
-    <hr>
-    <div class="row footer">
-      <div class="ten columns">
+    <section class="row body">
+      <div class="current-stack u-full-width u-text-center u-cursor-pointer js-toggle-child">
+        <p title="Want to see what I've played with in the past?">PHP - Perl - SQL - Html - Css - Javascript - jQuery</p>
+        <div class="current-stack-more-info" style="display: none;">
+          <p><em>Previous:</em> C# - Classic ASP - Joomla - Wordpress - Magento - Linux Servers - Windows Servers</p>
+        </div>
+      </div>   
+    </section>
+
+    <footer class="row">
+      <div class="u-full-width u-text-center">
           <a class="button" href="https://uk.linkedin.com/pub/joe-ecob/93/4ba/338/" title="Linked In - Opens externally" target="_blank">
             Linked In
           </a>
@@ -103,10 +61,7 @@
             Email
           </a>
       </div>
-      <div class="two columns">
-        &copy; Joe Ecob
-      </div>
-    </div>
+    </footer>
   </div>
 
   <!-- End Document and render Javascript
@@ -121,8 +76,8 @@
     ga('send', 'pageview');
 
     $(document).ready(function () {
-      $('li.has-child').click(function() {
-          $(this).toggleClass('open').find('ul').toggle();
+      $('.js-toggle-child').click(function() {
+          $(this).toggleClass('open').children().toggle();
       });
     });
   </script>

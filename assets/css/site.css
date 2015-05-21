@@ -404,6 +404,10 @@ form {
   float: right; }
 .u-pull-left {
   float: left; }
+.u-text-center {
+  text-align: center; }
+.u-cursor-pointer {
+  cursor: pointer; }
 
 
 /* Misc
@@ -457,41 +461,27 @@ there.
 h1.leading {
   font-family: Summit;
   font-weight: lighter;
-  font-size: 8rem;
+  font-size: 10rem;
   color: #aaa;
   text-align: center;
 }
 
-ul {
-  text-align: center;
+header {
+  margin-top: 10rem;
 }
 
-ul li {
-  list-style-type: none;
+footer {
+  margin-bottom: 10rem;
 }
 
-ul li.has-child ul {
-  background-color: #555;
+section.body {
+  margin-bottom: 2rem;
 }
 
-li.has-child {
-  cursor: pointer;
+section.body div.current-stack-more-info {
+  background-color: #666;
 }
 
-li.has-child:after {
-  content: "\25BC";
-  color: #555;
-  font-size: 1rem;
-}
-
-li.has-child.open:after {
-  content: none;
-}
-
-ul li ul {
-  display: none;
-}
-
-.footer > div:last-child {
-  text-align: right;
+section.body div p {
+  padding: 1rem;
 }
