@@ -491,11 +491,6 @@ section.body div p {
   padding: 1rem;
 }
 
-.u-arrow-offset,
-p > .hook-arrow {
-  margin-left: 1rem;
-}
-
 /* Stop there being a massive header when on mobile */
 @media (max-width: 550px) {
   header {
