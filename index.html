@@ -35,36 +35,76 @@
     </header>
 
     <section class="row body">
+      <div class="u-full-width u-text-center">
+        <a class="button" href="https://uk.linkedin.com/in/JoeEcob" title="Linked In - Opens externally" target="_blank">
+          Linked In
+        </a>
+        &nbsp;
+        <a class="button" href="http://stackoverflow.com/users/3294938/ecobob" title="Stack Overflow - Opens externally" target="_blank">
+          Stack Overflow
+        </a>
+        &nbsp;
+        <a class="button" href="https://github.com/JoeEcob" title="Github - Opens externally" target="_blank">
+          Github
+        </a>
+        &nbsp;
+        <a class="button" href="mailto:me@joeecob.co.uk" title="Email - Opens in your native client">
+          Email
+        </a>
+      </div>
+    </section>
+
+    <section class="row body">
       <div class="current-stack u-full-width u-text-center u-cursor-pointer js-toggle-child">
-        <p class="u-arrow-offset" title="Want to see what I've played with in the past?">
-          PHP - SQL - Html - Css - Javascript - jQuery
-          <span class="hook-arrow">&#8617;</span>
-        </p>
+        <ul class="chart">
+          <li class="axis">
+            <div class="label">MVP</div>
+            <div class="label">Elite</div>
+            <div class="label">Slugger</div>
+            <div class="label">Rookie</div>
+          </li>
+          <li class="bar colour-1" style="height: 98%;" title="HTML - CSS 98%">
+            <div class="percent">98<span>%</span></div>
+            <div class="skill">Html<br>CSS</div>
+          </li>
+          <li class="bar colour-2" style="height: 95%;" title="Javascript - jQuery 95%">
+            <div class="percent">95<span>%</span></div>
+            <div class="skill">Javascript <br> jQuery</div>
+          </li>
+          <li class="bar colour-3" style="height: 90%;" title="Classic ASP 90%">
+            <div class="percent">90<span>%</span></div>
+            <div class="skill">Classic ASP</div>
+          </li>
+          <li class="bar colour-4" style="height: 80%;" title="C# - ASP.NET MVC 80%">
+            <div class="percent">80<span>%</span></div>
+            <div class="skill">C# <br> ASP.NET MVC</div>
+          </li>
+          <li class="bar colour-5" style="height: 70%;" title="SQL 70%">
+            <div class="percent">70<span>%</span></div>
+            <div class="skill">SQL</div>
+          </li>
+          <li class="bar colour-1" style="height: 68%;" title="Joomla - Wordpress - Magento 68%">
+            <div class="percent">68<span>%</span></div>
+            <div class="skill">Joomla <br> Wordpress <br> Magento</div>
+          </li>
+          <li class="bar colour-2" style="height: 65%;" title="PHP 65%">
+            <div class="percent">65<span>%</span></div>
+            <div class="skill">PHP</div>
+          </li>
+          <li class="bar colour-3" style="height: 60%;" title="Server Management 60%">
+            <div class="percent">60<span>%</span></div>
+            <div class="skill">Server Management<div>
+          </li>
+          <li class="bar colour-4" style="height: 40%;" title="Perl 40%">
+            <div class="percent">40<span>%</span></div>
+            <div class="skill">Perl</div>
+          </li>  
+        </ul>
         <div class="current-stack-more-info" style="display: none;">
           <p><em class="lighter">Previous:</em> C# - ASP.NET MVC - Classic ASP - Joomla - Wordpress - Magento - Linux Servers - Windows Servers</p>
         </div>
       </div>   
     </section>
-
-    <footer class="row">
-      <div class="u-full-width u-text-center">
-          <a class="button" href="https://uk.linkedin.com/in/JoeEcob" title="Linked In - Opens externally" target="_blank">
-            Linked In
-          </a>
-          &nbsp;
-          <a class="button" href="http://stackoverflow.com/users/3294938/ecobob" title="Stack Overflow - Opens externally" target="_blank">
-            Stack Overflow
-          </a>
-          &nbsp;
-          <a class="button" href="https://github.com/JoeEcob" title="Github - Opens externally" target="_blank">
-            Github
-          </a>
-          &nbsp;
-          <a class="button" href="mailto:me@joeecob.co.uk" title="Email - Opens in your native client">
-            Email
-          </a>
-      </div>
-    </footer>
   </div>
 
   <!-- End Document and render Javascript
@@ -77,12 +117,6 @@
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
     ga('create', 'UA-51191945-1', 'auto');
     ga('send', 'pageview');
-
-    $(document).ready(function () {
-      $('.js-toggle-child').click(function() {
-          $(this).toggleClass('open').children().toggle();
-      });
-    });
   </script>
 
 </body>

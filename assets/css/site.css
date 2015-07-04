@@ -232,9 +232,10 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-  color: #999;
+  color: #222;
   border-color: #888;
-  outline: 0; }
+  outline: 0;
+  background-color: #bbb; }
 .button.button-primary,
 button.button-primary,
 input[type="submit"].button-primary,
@@ -467,7 +468,7 @@ h1.leading {
 }
 
 header {
-  margin-top: 10rem;
+  margin-top: 5rem;
 }
 
 footer {
@@ -504,4 +505,126 @@ p > .hook-arrow {
   footer {
     margin-bottom: 2rem;
   }
+}
+
+/* Skills chart
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.chart {
+  clear: both;
+  padding: 0;
+  width: 100%;
+  color: #222;
+}
+.chart li {
+  display: block;
+  height: 125px;
+  padding: emCalc(25px) 0;
+  position: relative;
+  text-align: center;
+  vertical-align: bottom;
+  -moz-border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px;
+  border-radius: 4px 4px 0 0;
+}
+.chart .axis {
+  display: none;
+  top: emCalc(-45px);
+  width: 8%;
+}
+.chart .label {
+  margin: -9px 0 71px 0;
+  color: #aaa;
+}
+.chart .percent {
+  opacity: .4;
+  width: 100%;
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+.chart .percent span {
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+.chart .skill {
+  font-weight: 800;
+  opacity: .5;
+  overflow: hidden;
+  text-transform: uppercase;
+  width: 100%;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+@media (min-width: 700px) {
+  .chart {
+    height: 425px;
+    margin: 0 auto emCalc(-32px);
+  }
+  .chart li {
+    display: inline-block;
+    height: 425px;
+    margin: 0 1.8% 0 0;
+    width: 7%;
+  }
+  .chart .axis {
+    display: inline-block;
+  }
+  .chart .percent {
+    position: absolute;
+    font-size: 62px;
+    font-size: 3.875rem;
+    letter-spacing: -3px;
+  }
+  .chart .skill {
+    bottom: 20px;
+    position: absolute;
+    font-size: 16px;
+    font-size: 1rem;
+  }
+}
+.chart .colour-1 {
+  background: #0B486B;
+  border: 1px solid #0B486B;
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1277b0), color-stop(70%, #0B486B));
+  background-image: -moz-linear-gradient(#1277b0, #0B486B 70%);
+  background-image: -webkit-linear-gradient(#1277b0, #0B486B 70%);
+  background-image: linear-gradient(#1277b0, #0B486B 70%);
+  color: #eee;
+}
+.chart .colour-2 {
+  background: #3B8686;
+  border: 1px solid #3B8686;
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #58b5b5), color-stop(70%, #3B8686));
+  background-image: -moz-linear-gradient(#58b5b5, #3B8686 70%);
+  background-image: -webkit-linear-gradient(#58b5b5, #3B8686 70%);
+  background-image: linear-gradient(#58b5b5, #3B8686 70%);
+  color: #eee;
+}
+.chart .colour-3 {
+  background: #79BD9A;
+  border: 1px solid #79BD9A;
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #acd6c1), color-stop(70%, #79BD9A));
+  background-image: -moz-linear-gradient(#acd6c1, #79BD9A 70%);
+  background-image: -webkit-linear-gradient(#acd6c1, #79BD9A 70%);
+  background-image: linear-gradient(#acd6c1, #79BD9A 70%);
+}
+.chart .colour-4 {
+  background: #A8DBA8;
+  border: 1px solid #A8DBA8;
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #def1de), color-stop(70%, #A8DBA8));
+  background-image: -moz-linear-gradient(#def1de, #A8DBA8 70%);
+  background-image: -webkit-linear-gradient(#def1de, #A8DBA8 70%);
+  background-image: linear-gradient(#def1de, #A8DBA8 70%);
+}
+.chart .colour-5 {
+  background: #CFF09E;
+  border: 1px solid #CFF09E;
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f0fae0), color-stop(70%, #CFF09E));
+  background-image: -moz-linear-gradient(#f0fae0, #CFF09E 70%);
+  background-image: -webkit-linear-gradient(#f0fae0, #CFF09E 70%);
+  background-image: linear-gradient(#f0fae0, #CFF09E 70%);
 }
