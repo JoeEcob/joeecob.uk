@@ -513,7 +513,7 @@ section.body div p {
 .chart li {
   display: block;
   height: 125px;
-  padding: emCalc(25px) 0;
+  padding: 0;
   position: relative;
   text-align: center;
   vertical-align: bottom;
@@ -523,7 +523,6 @@ section.body div p {
 }
 .chart .axis {
   display: none;
-  top: emCalc(-45px);
   width: 8%;
 }
 .chart .label {
@@ -552,7 +551,7 @@ section.body div p {
 @media (min-width: 700px) {
   .chart {
     height: 425px;
-    margin: 0 auto emCalc(-32px);
+    margin: 0 auto;
   }
   .chart li {
     display: inline-block;
