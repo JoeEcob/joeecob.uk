@@ -576,49 +576,22 @@ section.body div p {
   }
 }
 .chart .colour-1 {
-  background: #0B486B;
-  border: 1px solid #0B486B;
+  background: #556270;
+  border: 1px solid #556270;
   background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1277b0), color-stop(70%, #0B486B));
-  background-image: -moz-linear-gradient(#1277b0, #0B486B 70%);
-  background-image: -webkit-linear-gradient(#1277b0, #0B486B 70%);
-  background-image: linear-gradient(#1277b0, #0B486B 70%);
-  color: #eee;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #798899), color-stop(70%, #556270));
+  background-image: -moz-linear-gradient(#798899, #556270 70%);
+  background-image: -webkit-linear-gradient(#798899, #556270 70%);
+  background-image: linear-gradient(#798899, #556270 70%);
+  color: #fff;
 }
 .chart .colour-2 {
-  background: #3B8686;
-  border: 1px solid #3B8686;
+  background: #706355;
+  border: 1px solid #706355;
   background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #58b5b5), color-stop(70%, #3B8686));
-  background-image: -moz-linear-gradient(#58b5b5, #3B8686 70%);
-  background-image: -webkit-linear-gradient(#58b5b5, #3B8686 70%);
-  background-image: linear-gradient(#58b5b5, #3B8686 70%);
-  color: #eee;
-}
-.chart .colour-3 {
-  background: #79BD9A;
-  border: 1px solid #79BD9A;
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #acd6c1), color-stop(70%, #79BD9A));
-  background-image: -moz-linear-gradient(#acd6c1, #79BD9A 70%);
-  background-image: -webkit-linear-gradient(#acd6c1, #79BD9A 70%);
-  background-image: linear-gradient(#acd6c1, #79BD9A 70%);
-}
-.chart .colour-4 {
-  background: #A8DBA8;
-  border: 1px solid #A8DBA8;
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #def1de), color-stop(70%, #A8DBA8));
-  background-image: -moz-linear-gradient(#def1de, #A8DBA8 70%);
-  background-image: -webkit-linear-gradient(#def1de, #A8DBA8 70%);
-  background-image: linear-gradient(#def1de, #A8DBA8 70%);
-}
-.chart .colour-5 {
-  background: #CFF09E;
-  border: 1px solid #CFF09E;
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f0fae0), color-stop(70%, #CFF09E));
-  background-image: -moz-linear-gradient(#f0fae0, #CFF09E 70%);
-  background-image: -webkit-linear-gradient(#f0fae0, #CFF09E 70%);
-  background-image: linear-gradient(#f0fae0, #CFF09E 70%);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #998979), color-stop(70%, #706355));
+  background-image: -moz-linear-gradient(#998979, #706355 70%);
+  background-image: -webkit-linear-gradient(#998979, #706355 70%);
+  background-image: linear-gradient(#998979, #706355 70%);
+  color: #fff;
 }
