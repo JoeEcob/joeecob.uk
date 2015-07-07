@@ -158,7 +158,8 @@ body {
   line-height: 1.6;
   font-weight: 400;
   font-family: "robotolight", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #222;
+  /* Stardust pattern - By Atle Mo - http://subtlepatterns.com/stardust/ */
+  background: #222 url('/assets/img/stardust.png') repeat left top;
   color: #ddd;
   margin-bottom: 2%; }
 
