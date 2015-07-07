@@ -159,8 +159,8 @@ body {
   font-weight: 400;
   font-family: "robotolight", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   /* Stardust pattern - By Atle Mo - http://subtlepatterns.com/stardust/ */
-  background: #222 url('/assets/img/stardust.png') repeat left top;
-  color: #ddd;
+  background: #444349 url('/assets/img/stardust.png') repeat left top;
+  color: #bbb;
   margin-bottom: 2%; }
 
 
@@ -464,7 +464,7 @@ h1.leading {
   font-family: Summit;
   font-weight: lighter;
   font-size: 10rem;
-  color: #aaa;
+  color: #bbb;
   text-align: center;
 }
 
@@ -478,14 +478,6 @@ footer {
 
 section.body {
   margin-bottom: 2rem;
-}
-
-section.body div.current-stack-more-info {
-  background-color: #666;
-}
-
-.lighter {
-  color: #aaa;
 }
 
 section.body div p {
@@ -509,7 +501,6 @@ section.body div p {
   clear: both;
   padding: 0;
   width: 100%;
-  color: #222;
 }
 .chart li {
   display: block;
@@ -528,10 +519,9 @@ section.body div p {
 }
 .chart .label {
   margin: -9px 0 71px 0;
-  color: #aaa;
 }
 .chart .percent {
-  opacity: .4;
+  opacity: .6;
   width: 100%;
   font-size: 30px;
   font-size: 1.875rem;
@@ -542,7 +532,7 @@ section.body div p {
 }
 .chart .skill {
   font-weight: 800;
-  opacity: .5;
+  opacity: .6;
   overflow: hidden;
   text-transform: uppercase;
   width: 100%;
