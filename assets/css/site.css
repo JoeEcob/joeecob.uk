@@ -27,7 +27,6 @@
 - Spacing
 - Utilities
 - Clearing
-- Media Queries
 - Custom styles
 */
 
@@ -36,7 +35,12 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @font-face {
   font-family: 'NexusRustSlab';
-  src: url("../fonts/NexaRustSlab-BlackShadow01.otf");
+  src: url('../fonts/nexarustslab-blackshadow01-webfont.eot');
+  src: url('../fonts/nexarustslab-blackshadow01-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/nexarustslab-blackshadow01-webfont.woff2') format('woff2'),
+       url('../fonts/nexarustslab-blackshadow01-webfont.woff') format('woff'),
+       url('../fonts/nexarustslab-blackshadow01-webfont.ttf') format('truetype'),
+       url('../fonts/nexarustslab-blackshadow01-webfont.svg#nexa_rust_slabblack_shadow_01') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -413,36 +417,7 @@ hr {
   display: table;
   clear: both; }
 
-
-/* Media Queries
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/*
-Note: The best way to structure the use of media queries is to create the queries
-near the relevant code. For example, if you wanted to change the styles for buttons
-on small devices, paste the mobile query code up in the buttons section and style it
-there.
-*/
-
-
-/* Larger than mobile */
-@media (min-width: 400px) {}
-
-/* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {}
-
-/* Larger than tablet */
-@media (min-width: 750px) {}
-
-/* Larger than desktop */
-@media (min-width: 1000px) {}
-
-/* Larger than Desktop HD */
-@media (min-width: 1200px) {}
-
-/* Custom Styles
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-/* Hover Effect
+/* Custom Styles - Refactored from
 http://miketricking.github.io/dist/
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 html, body {
@@ -455,15 +430,11 @@ html, body {
   overflow: hidden;
   position: relative;
   text-align: center;
-  cursor: default;
   display: block;
   position: relative;
   -webkit-transition: all 0.35s;
   -o-transition: all 0.35s;
   transition: all 0.35s;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
   filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.7" /><feFuncG type="linear" slope="0.7" /><feFuncB type="linear" slope="0.7" /></feComponentTransfer></filter></svg>#filter');
   filter: brightness(0.7);
   -webkit-filter: brightness(0.7);
@@ -485,7 +456,17 @@ html, body {
   font-family: 'NexusRustSlab';
   font-size: 10rem;
   width: 100%;
+  z-index: 1;
+  -webkit-transform: translate3d(-50%,-50%,0);
+  transform: translate3d(-50%,-50%,0);
 }
+
+@media (max-width: 850px) {
+  .container .header {
+    font-size: 4rem;
+  }
+}
+
 
 .container .cross {
   -webkit-transform: rotate(-45deg);
@@ -496,60 +477,16 @@ html, body {
   position: absolute;
 }
 
-.container hr {
-  width: 80%;
-  opacity: 0;
-  filter: alpha(opacity=0);
-}
-
 .container .header,
 .container hr {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: translate3d(-50%,-50%,0);
-  transform: translate3d(-50%,-50%,0);
-  -webkit-transform-origin: 50%;
-  -ms-transform-origin: 50%;
-  transform-origin: 50%;
-  background-color: transparent;
-  margin: 0px;
+  margin: 0;
 }
 
-.group1, .group2 {
-  left: 50%;
-  position: absolute;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: translate3d(-50%,-50%,0);
-  transform: translate3d(-50%,-50%,0);
-  -webkit-transform-origin: 50%;
-  -ms-transform-origin: 50%;
-  transform-origin: 50%;
-  background-color: transparent;
-  margin: 0px;
-  padding: 0px;
-}
-
-.group1 {
-  top: 35%;
-}
-
-.group2 {
-  top: 65%;
-}
-
-.container p {
-  width: 100%;
-  text-transform: none;
-}
-
-.container a span {
-  padding: 2%;
-  font-size: 4rem;
-  color: #fff;
+.container hr {
+  width: 80%;
 }
 
 .container hr:nth-child(1) {
@@ -564,4 +501,28 @@ html, body {
   filter: alpha(opacity=100);
   -webkit-transform: translate3d(-50%,-50%,0) rotate(90deg) scale3d(1,1,1);
   transform: translate3d(-50%,-50%,0) rotate(90deg) scale3d(1,1,1);
+}
+
+.group1, .group2 {
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translate3d(-50%,-50%,0);
+  transform: translate3d(-50%,-50%,0);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.group1 {
+  top: 35%;
+}
+
+.group2 {
+  top: 65%;
+}
+
+.container a span {
+  padding: 2%;
+  font-size: 4rem;
+  color: #fff;
 }
