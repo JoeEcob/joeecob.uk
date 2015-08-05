@@ -35,26 +35,8 @@
 /* Fonts
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @font-face {
-  font-family: 'Summit';
-  src: url("fonts/SummitLight-Inline.otf");
-  src: url('fonts/summitlight-inline-webfont.eot'),
-       url('fonts/summitlight-inline-webfont.eot?#iefix') format('embedded-opentype'),
-       url('fonts/summitlight-inline-webfont.woff2') format('woff2'),
-       url('fonts/summitlight-inline-webfont.woff') format('woff'),
-       url('fonts/summitlight-inline-webfont.ttf') format('truetype'),
-       url('fonts/summitlight-inline-webfont.svg#summit_lightinline') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'robotolight';
-  src: url('fonts/roboto-light-webfont.eot');
-  src: url('fonts/roboto-light-webfont.eot?#iefix') format('embedded-opentype'),
-       url('fonts/roboto-light-webfont.woff2') format('woff2'),
-       url('fonts/roboto-light-webfont.woff') format('woff'),
-       url('fonts/roboto-light-webfont.ttf') format('truetype'),
-       url('fonts/roboto-light-webfont.svg#robotolight') format('svg');
+  font-family: 'NexusRustSlab';
+  src: url("../fonts/NexaRustSlab-BlackShadow01.otf");
   font-weight: normal;
   font-style: normal;
 }
@@ -157,11 +139,10 @@ body {
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
-  font-family: "robotolight", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  /* Stardust pattern - By Atle Mo - http://subtlepatterns.com/stardust/ */
-  background: #444349 url('/assets/img/stardust.png') repeat left top;
-  color: #bbb;
-  margin-bottom: 2%; }
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #222 url('../img/background.jpg') no-repeat left top / cover;
+  color: #fff;
+}
 
 
 /* Typography
@@ -460,129 +441,127 @@ there.
 
 /* Custom Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-h1.leading {
-  font-family: Summit;
-  font-weight: lighter;
-  font-size: 10rem;
-  color: #bbb;
-  text-align: center;
-}
 
-header {
-  margin-top: 5rem;
-}
-
-footer {
-  margin-bottom: 10rem;
-}
-
-section.body {
-  margin-bottom: 2rem;
-}
-
-section.body div p {
-  padding: 1rem;
-}
-
-/* Stop there being a massive header when on mobile */
-@media (max-width: 550px) {
-  header {
-    margin-top: 2rem;
-  }
-
-  footer {
-    margin-bottom: 2rem;
-  }
-}
-
-/* Skills chart
+/* Hover Effect
+http://miketricking.github.io/dist/
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.chart {
-  clear: both;
-  padding: 0;
-  width: 100%;
+html, body {
+  height: 100%;
 }
-.chart li {
-  display: block;
-  height: 125px;
-  padding: 0;
+
+.container {
+  width: 70%;
+  height: 100%;
+  overflow: hidden;
   position: relative;
   text-align: center;
-  vertical-align: bottom;
-  -moz-border-radius: 4px 4px 0 0;
-  -webkit-border-radius: 4px;
-  border-radius: 4px 4px 0 0;
+  cursor: default;
+  display: block;
+  position: relative;
+  -webkit-transition: all 0.35s;
+  -o-transition: all 0.35s;
+  transition: all 0.35s;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.7" /><feFuncG type="linear" slope="0.7" /><feFuncB type="linear" slope="0.7" /></feComponentTransfer></filter></svg>#filter');
+  filter: brightness(0.7);
+  -webkit-filter: brightness(0.7);
 }
-.chart .axis {
-  display: none;
-  width: 8%;
-}
-.chart .label {
-  margin: -9px 0 71px 0;
-}
-.chart .percent {
-  opacity: .5;
+
+.container .overlay {
   width: 100%;
-  font-size: 30px;
-  font-size: 1.875rem;
-}
-.chart .percent span {
-  font-size: 30px;
-  font-size: 1.875rem;
-}
-.chart .skill {
-  font-weight: 800;
-  opacity: .6;
+  height: 100%;
+  position: absolute;
   overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.container .header {
   text-transform: uppercase;
+  text-align: center;
+  padding: 1%;
+  font-family: 'NexusRustSlab';
+  font-size: 10rem;
   width: 100%;
-  font-size: 14px;
-  font-size: 0.875rem;
 }
-@media (min-width: 700px) {
-  .chart {
-    height: 425px;
-    margin: 0 auto;
-  }
-  .chart li {
-    display: inline-block;
-    height: 425px;
-    margin: 0 1.8% 0 0;
-    width: 7%;
-  }
-  .chart .axis {
-    display: inline-block;
-  }
-  .chart .percent {
-    position: absolute;
-    font-size: 62px;
-    font-size: 3.875rem;
-    letter-spacing: -3px;
-  }
-  .chart .skill {
-    bottom: 20px;
-    position: absolute;
-    font-size: 16px;
-    font-size: 1rem;
-  }
+
+.container .cross {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
-.chart .colour-1 {
-  background: #556270;
-  border: 1px solid #556270;
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #798899), color-stop(70%, #556270));
-  background-image: -moz-linear-gradient(#798899, #556270 70%);
-  background-image: -webkit-linear-gradient(#798899, #556270 70%);
-  background-image: linear-gradient(#798899, #556270 70%);
+
+.container hr {
+  width: 80%;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.container .header,
+.container hr {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-50%,-50%,0);
+  transform: translate3d(-50%,-50%,0);
+  -webkit-transform-origin: 50%;
+  -ms-transform-origin: 50%;
+  transform-origin: 50%;
+  background-color: transparent;
+  margin: 0px;
+}
+
+.group1, .group2 {
+  left: 50%;
+  position: absolute;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-50%,-50%,0);
+  transform: translate3d(-50%,-50%,0);
+  -webkit-transform-origin: 50%;
+  -ms-transform-origin: 50%;
+  transform-origin: 50%;
+  background-color: transparent;
+  margin: 0px;
+  padding: 0px;
+}
+
+.group1 {
+  top: 35%;
+}
+
+.group2 {
+  top: 65%;
+}
+
+.container p {
+  width: 100%;
+  text-transform: none;
+}
+
+.container a span {
+  padding: 2%;
+  font-size: 4rem;
   color: #fff;
 }
-.chart .colour-2 {
-  background: #706355;
-  border: 1px solid #706355;
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #998979), color-stop(70%, #706355));
-  background-image: -moz-linear-gradient(#998979, #706355 70%);
-  background-image: -webkit-linear-gradient(#998979, #706355 70%);
-  background-image: linear-gradient(#998979, #706355 70%);
-  color: #fff;
+
+.container hr:nth-child(1) {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: translate3d(-50%,-50%,0) rotate(0deg) scale3d(1,1,1);
+  transform: translate3d(-50%,-50%,0) rotate(0deg) scale3d(1,1,1);
+}
+
+.container hr:nth-child(2) {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: translate3d(-50%,-50%,0) rotate(90deg) scale3d(1,1,1);
+  transform: translate3d(-50%,-50%,0) rotate(90deg) scale3d(1,1,1);
 }
