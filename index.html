@@ -17,7 +17,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/site.css">
-  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -28,35 +28,59 @@
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <section class="container">
-    <div class="overlay">
-      <h1 class="header">Joe Ecob</h1>
-      <div class="cross">
-        <hr>
-        <hr>
-      </div>
-      <p class="group1">
-        <a href="https://uk.linkedin.com/in/JoeEcob" title="Linked In" target="_blank">
-          <span class="fa fa-linkedin"></span>
-        </a>
-        <a href="http://stackoverflow.com/users/3294938/ecobob" title="Stack Overflow" target="_blank">
-          <span class="fa fa-stack-overflow"></span>
-        </a>
-      </p>
-      <p class="group2">
-        <a href="https://github.com/JoeEcob" title="Github" target="_blank">
-          <span class="fa fa-github-alt"></span>
-        </a>
-        <a href="mailto:me@joeecob.co.uk" title="Email">
-          <span class="fa fa-envelope"></span>
-        </a>
-      </p>
+  <section class="center-box">
+    <div class="first">
+      &lt;<span id="typed-first"></span><span class="blue">/&gt;</span>
     </div>
+  
+    <div class="second">
+      &lt;<span id="typed-second"></span>/&gt;
+    </div>
+  </section>
+
+  <section class="icons">
+    <a href="https://uk.linkedin.com/in/JoeEcob" title="Linked In" target="_blank">
+      <span class="fa fa-linkedin"></span>
+    </a>
+    <a href="http://stackoverflow.com/users/3294938/ecobob" title="Stack Overflow" target="_blank">
+      <span class="fa fa-stack-overflow"></span>
+    </a>
+    <a href="https://github.com/JoeEcob" title="Github" target="_blank">
+      <span class="fa fa-github-alt"></span>
+    </a>
+    <a href="mailto:me@joeecob.co.uk" title="Email">
+      <span class="fa fa-envelope"></span>
+    </a>
   </section>
 
   <!-- End Document and render Javascript
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="assets/js/typed.min.js"></script>
   <script>
+    $(function(){
+      // Run First animation
+      typeText('#typed-first', 'JOE_ECOB');
+
+      // Wait a little while for the next to run
+      setTimeout(function () {
+        // Cleanup cursor
+        $('.typed-cursor').remove();
+        $('span.blue').prepend(' ');
+
+        // Run second animation, with delay
+        typeText('#typed-second', 'FULL_STACK_DEVELOPER');
+      }, 3000);
+    });
+
+    function typeText (destination, string) {
+        $(destination).typed({
+            strings: [string],
+            typeSpeed: 30,
+            startDelay: 1000
+        });
+    }
+
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
