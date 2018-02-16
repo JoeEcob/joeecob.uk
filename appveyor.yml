@@ -1,0 +1,14 @@
+version: 0.1.{build}
+skip_tags: true
+artifacts:
+  - path: src
+    name: build
+deploy:
+  - provider: S3
+    access_key_id: AKIAJJDSS3WBYW4BDRBQ
+    secret_access_key:
+      secure: 33XHqeAtb+/PH/dSvPZxtxdfy00CfvNcWdM583AvgJhAEXlo1oKzo1fhU6iqv+u1
+    region: eu-west-2
+    bucket: joeecob.uk
+    artifact: build
+    unzip: true
