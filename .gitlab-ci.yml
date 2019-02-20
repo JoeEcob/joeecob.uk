@@ -1,0 +1,18 @@
+variables:
+  AWS_DEFAULT_REGION: eu-west-2
+  BUCKET_NAME: joeecob.uk
+
+deploy_prod:
+  stage: deploy
+  image: python:latest
+  dependencies:
+    - build
+  before_script:
+    - pip install awscli
+  script:
+    - aws s3 cp src/ s3://${BUCKET_NAME} --recursive
+  environment:
+    name: production
+    url: http://${BUCKET_NAME}.s3-website.${AWS_DEFAULT_REGION}.amazonaws.com/
+  only:
+    - master
