@@ -4,7 +4,7 @@ variables:
 
 deploy_prod:
   stage: deploy
-  image: python:latest
+  image: python:alpine
   before_script:
     - pip install awscli
   script:
